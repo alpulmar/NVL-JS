@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var palabras=["ojo","vaca","ala"];
+        for (i=0; i<3; i++){
+            document.write(palabras[i]+"<br/>");
+        }
+        function esPalindromo() {
+            var palabras=[i];
+            if(palabras==0){
+                return false;
+            }
+            for (i=0; i<palabras/2; i++){
+                if(palabras[i] != palabras[i/2]){
+                    return false;
+                }
+            }
+            return true;
+        }      
+    </script>
+</body>
+</html>
