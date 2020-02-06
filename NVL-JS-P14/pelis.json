@@ -1,0 +1,94 @@
+[
+    {
+        "Nombre":"El Señor de los Anillos",
+        "Genero":"Acción"
+    },
+    {
+        "Nombre":"Regraso al Futuro",
+        "Genero":"Acción"
+    },
+    {
+        "Nombre":"Los Increibles 2",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"Titanic",
+        "Genero":"Drama"
+    },
+    {
+        "Nombre":"Jurassic Park",
+        "Genero":"Ficción"
+    },
+    {
+        "Nombre":"El Resplandor",
+        "Genero":"Terror"
+    },
+    {
+        "Nombre":"El Silencio de los Corderos",
+        "Genero":"Terror"
+    },
+    {
+        "Nombre":"Muñeco Diabólico",
+        "Genero":"Terror"
+    },
+    {
+        "Nombre":"Gru: mi villano favorito",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"Toy Story",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"El Padrino",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"Los Vengadores: la era de ultron",
+        "Genero":"Ficción"
+    },
+    {
+        "Nombre":"El Rey León",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"La Naranja Mecánica",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"El Caballero Oscuro",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"Infiltrados",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"Cincuenta Sombras de Grey",
+        "Genero":"Romántica"
+    },
+    {
+        "Nombre":"Los Siete Magníficos",
+        "Genero":"Wester"
+    },
+    {
+        "Nombre":"La Muerte Tenía un Precio",
+        "Genero":"Wester"
+    },
+    {
+        "Nombre":"Gladiator",
+        "Genero":"Drama"
+    },
+    {
+        "Nombre":"Troya",
+        "Genero":"Drama"
+    },
+    {
+        "Nombre":"Los Puentes de Madison",
+        "Genero":"Romántica"
+    },
+    {
+        "Nombre":"Lo que el Viento se Llevó",
+        "Genero":"Drama"
+    }  
+]

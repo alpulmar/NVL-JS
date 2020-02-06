@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var pelis=[
+    {
+        "Nombre":"El Señor de los Anillos",
+        "Genero":"Acción"
+    },
+    {
+        "Nombre":"Regraso al Futuro",
+        "Genero":"Acción"
+    },
+    {
+        "Nombre":"Los Increibles 2",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"Titanic",
+        "Genero":"Drama"
+    },
+    {
+        "Nombre":"Jurassic Park",
+        "Genero":"Ficción"
+    },
+    {
+        "Nombre":"El Resplandor",
+        "Genero":"Terror"
+    },
+    {
+        "Nombre":"El Silencio de los Corderos",
+        "Genero":"Terror"
+    },
+    {
+        "Nombre":"Muñeco Diabólico",
+        "Genero":"Terror"
+    },
+    {
+        "Nombre":"Gru: mi villano favorito",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"Toy Story",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"El Padrino",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"Los Vengadores: la era de ultron",
+        "Genero":"Ficción"
+    },
+    {
+        "Nombre":"El Rey León",
+        "Genero":"Animación"
+    },
+    {
+        "Nombre":"La Naranja Mecánica",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"El Caballero Oscuro",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"Infiltrados",
+        "Genero":"Thriller"
+    },
+    {
+        "Nombre":"Cincuenta Sombras de Grey",
+        "Genero":"Romántica"
+    },
+    {
+        "Nombre":"Los Siete Magníficos",
+        "Genero":"Wester"
+    },
+    {
+        "Nombre":"La Muerte Tenía un Precio",
+        "Genero":"Wester"
+    },
+    {
+        "Nombre":"Gladiator",
+        "Genero":"Drama"
+    },
+    {
+        "Nombre":"Troya",
+        "Genero":"Drama"
+    },
+    {
+        "Nombre":"Los Puentes de Madison",
+        "Genero":"Romántica"
+    },
+    {
+        "Nombre":"Lo que el Viento se Llevó",
+        "Genero":"Drama"
+    }  
+    ]
+    var pelis = document.querySelector("#boton").addEventListener("click",presentarLista);
+            function presentarLista() {
+                const xhttp = XMLHttpRequest();
+                xhttp.open("GET", "pelis.json", true);
+                xhttp.send();
+                xhttp.onreadystatechange = function () {
+                    if(this.readyState == 4 && this.status == 200){
+                        let datos = JSON.parse(this.resoponseText);
+                        console.log(datos);
+                        let res = document.querySelector("#lista");
+                        res.innerHTML = "";
+                        for(let item of datos){
+                            res.innerHTML += "<tr><td>${item.Nombre}</td><td>${item.Genero}</td></tr> "
+                        }
+                    }
+                }
+            }
+    </script>
+    <div id="div1">
+        <div id="tabla">
+            <button class="btn" id="boton">Lista de pelis</button>
+            <br>
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                </thead>
+                <tbody id="lista">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
