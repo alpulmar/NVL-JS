@@ -9,21 +9,22 @@
 <body>
     <script>
         var palabras=["ojo","vaca","ala"];
-        for (i=0; i<3; i++){
-            document.write(palabras[i]+"<br/>");
-        }
         function esPalindromo() {
-            var palabras=[i];
-            if(palabras==0){
-                return false;
+            palabras;
+            for (i=0; i<3; i++){
+                document.write(palabras[i]+"<br/>");
+                if(palabras [i] == 0){
+                    alert("no es palíndromo");
+                }
             }
             for (i=0; i<palabras/2; i++){
                 if(palabras[i] == palabras[i/2]){
-                    return false;
+                    alert("no es palíndromo");
                 }
             }
-            return true;
-        }      
+            alert("ojo y ala son palíndromos");
+        } 
+        esPalindromo();
     </script>
 </body>
 </html>
