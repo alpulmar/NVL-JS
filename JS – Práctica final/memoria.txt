@@ -1,0 +1,9 @@
+PRÁCTICA FINAL DEL MÓDULO JS:
+
+Se ha realizado un formulario de registro para el cual, un usuario pueda introducir sus datos personales y profesionales y, por consiguiente, esos datos puedan ser validados. El presente formulario se divide en dos partes claramente diferenciadas:
+
+a)Datos personales: una serie de inputs donde el usuario introduce su nombre, apellidos, fecha de nacimiento y su correo electrónico.
+
+b)Datos profesionales: en este caso se encuentran dos listas donde el usuario selecciona su profesión y estado civil. 
+
+El validador de formularios, preparado para este ejemplo, funciona en base a la aceptación de cualquier campo dentro del formulario, siendo éste rellenado de forma obligatoria. 

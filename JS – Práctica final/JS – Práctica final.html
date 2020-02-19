@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Akronim', cursive;
+            background-color: beige;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function comenzar() {
+            var nombre = document.getElementById("nombre");
+            var apellido = document.getElementById("apellido");
+            var fecha = document.getElementById("fecha");
+            var correo = document.getElementById("correo");
+            document.miFormulario.addEventListener("invalid",validar,true);
+            nombre.addEventListener("input",validar);
+            apellido.addEventListener("input",validar);
+            fecha.addEventListener("input",validar,);
+            correo.addEventListener("input",validar);
+            validar();
+        }
+        function validar() {
+            if(nombre.value == "" &&apellido.value == "" &&fecha.value == "" &&correo.value == ""){
+                nombre.setCustomValidity("Introduzca nombre");
+                apellido.setCustomValidity("Introduzca apellidos");
+                fecha.setCustomValidity("Introduzca fecha");
+                correo.setCustomValidity("Introduzca correo");
+                nombre.style.background = "red";
+                apellido.style.background = "red";
+                fecha.style.background = "red";
+                correo.style.background = "red";
+            }else{
+                nombre.setCustomValidity("");
+                apellidos.setCustomValidity("");
+                fecha.setCustomValidity("");
+                correo.setCustomValidity("");
+                nombre.style.background = "white";
+                apellido.style.background = "white";
+                fecha.style.background = "white";
+                correo.style.background = "white";
+            }
+        }
+        window.addEventListener("load",comenzar);
+    </script>
+</head>
+<body>
+    <form action="miFormulario">
+        <h1>Formulario</h1>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Introduzca su nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="name" required>
+            <br>
+            <br>
+            <label for="lastname">Introduzca sus apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="lastname" required>
+            <br>
+            <br>
+            <label for="date">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha de nacimiento" required>
+            <br>
+            <br>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="email" required>
+        </fieldset>
+        <fieldset>
+            <legend>Datos profesionales</legend>
+            <label for="estado civil">Introduzca su estado civil</label>
+            <select id=”opciones”>
+                <option value=”ES”>Soltero</option>
+                <option value=”IT”>Casado</option>
+            </select>
+            <br>
+            <br>
+            <label for="job">Introduzca su profesión</label>
+            <select id=”opciones”>
+                <option value=”ES”>Autónomo</option>
+                <option value=”IT”>Profesor</option>
+                <option value=”IT”>Científico</option>
+                <option value=”IT”>Ingeniero</option>
+                <option value=”IT”>Conductor</option>
+                <option value=”IT”>Piloto</option>
+                <option value=”IT”>Médico</option>
+                <option value=”IT”>Político</option>
+                <option value=”IT”>Técnico</option>
+                <option value=”IT”>Empresario</option>
+                <option value=”IT”>Juez</option>
+                <option value=”IT”>Abogado</option>
+                <option value=”IT”>Policia</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
