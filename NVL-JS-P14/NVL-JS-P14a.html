@@ -102,26 +102,27 @@
         "Genero":"Drama"
     }  
     ]
-    var pelis = document.querySelector("#boton");
+            var pelis = document.querySelector("#boton");
             document.addEventListener("click",presentarLista);
-            XMLHttpRequest;
-            xhttp = XMLHttpRequest;
             function presentarLista() {
+                const xhttp = new XMLHttpRequest();
                 xhttp.open("GET", "pelis.json", true);
                 xhttp.send();
                 xhttp.onreadystatechange = function () {
                     if(this.readyState == 4 && this.status == 200){
+                        console.log(this.responseText);
                         let datos = JSON.parse(this.resoponseText);
                         console.log(datos);
-                        let res = document.querySelector("#lista");
-                        res.innerHTML = "";
+                        let lista = document.querySelector("#lista");
+                        lista.innerHTML = "";
                         for(let item of datos){
-                            res.innerHTML += "<tr><td>${item.Nombre}</td><td>${item.Genero}</td></tr> "
+                            lista.innerHTML += "<tr><td>${item.Nombre}</td><td>${item.Genero}</td></tr> "
                         }
                     }
                 }
             }
             presentarLista();
+            xhttp.open();
     </script>
     <div id="div1">
         <div id="tabla">
