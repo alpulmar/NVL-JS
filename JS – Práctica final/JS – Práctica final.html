@@ -16,24 +16,23 @@
     <script>
         function comenzar() {
             var nombre = document.getElementById("nombre");
-            var apellido = document.getElementById("apellido");
+            var apellidos = document.getElementById("apellidos");
             var fecha = document.getElementById("fecha");
             var correo = document.getElementById("correo");
-            document.miFormulario.addEventListener("invalid",validar,true);
-            nombre.addEventListener("input",validar);
-            apellido.addEventListener("input",validar);
-            fecha.addEventListener("input",validar,);
-            correo.addEventListener("input",validar);
+            nombre.addEventListener("input",validar, false);
+            apellidos.addEventListener("input",validar, false);
+            fecha.addEventListener("input",validar, false);
+            correo.addEventListener("input",validar, false);
             validar();
         }
         function validar() {
-            if(nombre.value == "" &&apellido.value == "" &&fecha.value == "" &&correo.value == ""){
+            if(nombre.value == "" &&apellidos.value == "" &&fecha.value == "" &&correo.value == ""){
                 nombre.setCustomValidity("Introduzca nombre");
-                apellido.setCustomValidity("Introduzca apellidos");
+                apellidos.setCustomValidity("Introduzca apellidos");
                 fecha.setCustomValidity("Introduzca fecha");
                 correo.setCustomValidity("Introduzca correo");
                 nombre.style.background = "red";
-                apellido.style.background = "red";
+                apellidos.style.background = "red";
                 fecha.style.background = "red";
                 correo.style.background = "red";
             }else{
@@ -42,7 +41,7 @@
                 fecha.setCustomValidity("");
                 correo.setCustomValidity("");
                 nombre.style.background = "white";
-                apellido.style.background = "white";
+                apellidos.style.background = "white";
                 fecha.style.background = "white";
                 correo.style.background = "white";
             }
